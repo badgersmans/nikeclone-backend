@@ -1,0 +1,32 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "backend for https://www.youtube.com/watch?v=56C5JvvwB7E (swiftUI frontend)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "",
+    "start": "nodemon index.js",
+    "seedproducts": "node src/Utils/productSeeder",
+    "seedusers": "node src/Utils/userSeeder",
+    "build": "..."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@bitwarden/sdk-napi": "^1.0.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2",
+    "nodemailer": "^6.9.16"
+  }
+}
