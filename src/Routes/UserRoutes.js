@@ -5,13 +5,15 @@ import {
     registerUser,
     verifyCode,
     resendVerificationCode,
-    verifyResentCode
+    verifyResentCode,
 } from '../Controllers/UserController.js';
+import { registerToken } from '../Controllers/BitwardenController.js';
 import { authenticateAndAuthorize } from "../Middlewares/Auth.js";
 
 const router = express.Router();
 
 router.post("/register", registerUser);
+router.post("/passwordless/register/token", registerToken);
 
 router.post("/verify", verifyCode);
 router.post("/verifyagain", resendVerificationCode);
