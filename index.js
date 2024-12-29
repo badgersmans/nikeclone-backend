@@ -2,10 +2,12 @@ import express from "express";
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import cors from 'cors'
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
 import userRouter from './src/Routes/UserRoutes.js';
 import productRouter from './src/Routes/ProductRoutes.js';
 import cookieParser from "cookie-parser";
-
 
 dotenv.config()
 
@@ -18,6 +20,29 @@ app.use(express.json());
 app.use(userRouter);
 app.use(productRouter);
 app.use(cookieParser());
+
+// Define the paths to your SSL certificate and key
+const sslOptions = {
+    key: fs.readFileSync(path.resolve('/Users/shawnlaw/localhost-key.pem')),
+    cert: fs.readFileSync(path.resolve('/Users/shawnlaw/localhost.pem')),
+};
+
+// Serve the apple-app-site-association file
+app.use('/.well-known/apple-app-site-association', (req, res) => {
+    const associationData = {
+        "webcredentials": {
+            "apps": [
+                "M99D5U6NPG.learning-projects.dribble-maryam-money-management"
+            ]
+        }
+    };
+    res.json(associationData);  // Send JSON response instead of file
+});
+
+// app.use('/.well-known/apple-app-site-association', (req, res) => {
+//     const __dirname = path.dirname(new URL(import.meta.url).pathname); // get current directory path
+//     res.sendFile(path.resolve(__dirname, '.well-known', 'apple-app-site-association'));
+// });
 
 
 // Ensure the db URL is provided
@@ -40,6 +65,11 @@ app.get('/', (req, res) => {
     res.send('hello from server!')
 })
 
-app.listen(port, () => {
-    console.log(`APP STARTING ON PORT ✅✅✅✅ ${port}`)
-})
+// app.listen(port, () => {
+//     console.log(`APP STARTING ON PORT ✅✅✅✅ ${port}`)
+// })
+
+// Start the HTTPS server
+https.createServer(sslOptions, app).listen(port, () => {
+    console.log(`App is running on https://localhost:${port}`);
+});
