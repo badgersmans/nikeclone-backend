@@ -62,14 +62,21 @@ mongoose.connect(db)
 
 
 app.get('/', (req, res) => {
-    res.send('hello from server!')
+    const associationData = {
+        "webcredentials": {
+            "apps": [
+                "M99D5U6NPG.learning-projects.dribble-maryam-money-management"
+            ]
+        }
+    };
+    res.json(associationData);  // Send JSON response instead of the "hello from server!" message
+});
+
+app.listen(port, () => {
+    console.log(`APP STARTING ON PORT ✅✅✅✅ ${port}`)
 })
 
-// app.listen(port, () => {
-//     console.log(`APP STARTING ON PORT ✅✅✅✅ ${port}`)
-// })
-
 // Start the HTTPS server
-https.createServer(sslOptions, app).listen(port, () => {
-    console.log(`App is running on https://localhost:${port}`);
-});
+// https.createServer(sslOptions, app).listen(port, () => {
+//     console.log(`App is running on https://localhost:${port}`);
+// });
