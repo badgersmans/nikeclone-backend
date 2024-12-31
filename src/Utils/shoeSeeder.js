@@ -51,6 +51,17 @@ function getRandomSize() {
     return `UK ${randomSize}`; // Adding "UK" prefix to the size
 }
 
+function generateRandomDate() {
+    // Set the range for the random date (e.g., within the next 30 days)
+    const now = new Date();
+    const futureDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 30); // 30 days from today
+
+    // Generate a random timestamp between now and the futureDate
+    const randomTimestamp = new Date(now.getTime() + Math.random() * (futureDate.getTime() - now.getTime()));
+
+    return randomTimestamp.toISOString(); // Convert to ISO string format
+}
+
 const db = process.env.DB_URL;
 const placeholderImage = "https://raw.githack.com/badgersmans/nikeclone-backend-assets/main/assets/Shoes/default.png";
 
@@ -244,7 +255,7 @@ const seedShoe = async () => {
             "moreInfo": null,
             "discount": {
                 "percentage": 15,
-                "validUntil": "2024-12-31T00:00:00.000Z"
+                "validUntil": generateRandomDate()
             },
             "availableSizes": [
                 { "size": getRandomSize(), "availability": false },
@@ -293,7 +304,7 @@ const seedShoe = async () => {
                 },
                 "discount": {
                   "percentage": 10,
-                  "validUntil": "2024-11-15T00:00:00.000Z"
+                  "validUntil": generateRandomDate()
                 },
                 "availableSizes": [
                   { "size": getRandomSize(), "availability": true },
@@ -378,7 +389,7 @@ const seedShoe = async () => {
             "moreInfo": null,
             "discount": {
                 "percentage": 20,
-                "validUntil": "2024-12-01T00:00:00.000Z"
+                "validUntil": generateRandomDate()
             },
             "availableSizes": [
                 { "size": getRandomSize(), "availability": false },
@@ -472,7 +483,7 @@ const seedShoe = async () => {
             "moreInfo": null,
             "discount": {
                 "percentage": 5,
-                "validUntil": "2024-11-10T00:00:00.000Z"
+                "validUntil": generateRandomDate()
             },
             "availableSizes": [
                 { "size": getRandomSize(), "availability": false },
@@ -535,7 +546,7 @@ const seedShoe = async () => {
                 },
                 "discount": {
                   "percentage": 15,
-                  "validUntil": "2024-11-20T00:00:00.000Z"
+                  "validUntil": generateRandomDate()
                 },
                 "availableSizes": [
                   { "size": getRandomSize(), "availability": true },
@@ -812,7 +823,10 @@ const seedShoe = async () => {
                 "moreInfo": {
                 "text": "Available in multiple colorways."
                 },
-                "discount": null,
+                "discount": {
+                    "percentage": 80,
+                    "validUntil": generateRandomDate()
+                },
                 "availableSizes": [
                 { "size": getRandomSize(), "availability": true },
                 { "size": getRandomSize(), "availability": true },
