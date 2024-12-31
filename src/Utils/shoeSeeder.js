@@ -1707,7 +1707,230 @@ const seedShoe = async () => {
                 { "size": getRandomSize(), "availability": false },
                 { "size": getRandomSize(), "availability": true }
             ]
-            }, 
+            },
+            {
+                "name": "Nike ZoomX Invincible Run Flyknit",
+                "category": "Running Shoes",
+                "price": 180000,
+                "colors": [
+                  {
+                    "name": "Vivid Purple/Black",
+                    "images": [
+                      placeholderImage
+                    ],
+                    "sizes": [
+                      { "size": getRandomSize(), "availability": true },
+                      { "size": getRandomSize(), "availability": true },
+                      { "size": getRandomSize(), "availability": false },
+                      { "size": getRandomSize(), "availability": true }
+                    ],
+                    "isDefault": true
+                  }
+                ],
+                "description": "Unmatched comfort for long-distance running.",
+                "originCountry": ["USA", "China", "Vietnam", "Indonesia"],
+                "productDetails": {
+                  "tagline": "Ultra-soft cushioning for all-day comfort.",
+                  "benefits": [
+                    "ZoomX foam for maximum energy return.",
+                    "Flyknit upper for breathable, supportive fit."
+                  ],
+                  "productDetails": ["Weight: 330g", "Stack Height: 35mm"]
+                },
+                "sizeAndFit": {
+                  "recommendationText": "Fits true to size for a secure fit."
+                },
+                "freeDeliveryAndReturns": {
+                  "text": FREE_DELIVERY_AND_RETURNS_TEXT
+                },
+                "moreInfo": {
+                  "text": "Perfect for long runs and recovery."
+                },
+                "discount": null,
+                "availableSizes": [
+                  { "size": getRandomSize(), "availability": true },
+                  { "size": getRandomSize(), "availability": false },
+                  { "size": getRandomSize(), "availability": true }
+                ]
+            },
+            {
+            "name": "Nike Air Zoom Terra Kiger 8",
+            "category": "Trail Running Shoes",
+            "price": 140000,
+            "colors": [
+                {
+                "name": "Green/Black",
+                "images": [
+                    placeholderImage
+                ],
+                "sizes": [
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": false },
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": true }
+                ],
+                "isDefault": true
+                }
+            ],
+            "description": "Engineered for rugged trails and rough terrain.",
+            "originCountry": ["USA", "Vietnam", "China", "Mexico"],
+            "productDetails": {
+                "tagline": "Conquer the trails with confidence.",
+                "benefits": [
+                "Aggressive tread pattern for superior grip.",
+                "Zoom Air cushioning for responsive support."
+                ],
+                "productDetails": ["Weight: 280g", "Stack Height: 28mm"]
+            },
+            "sizeAndFit": {
+                "recommendationText": "Order true to size for a stable fit."
+            },
+            "freeDeliveryAndReturns": {
+                "text": FREE_DELIVERY_AND_RETURNS_TEXT
+            },
+            "moreInfo": {
+                "text": "Available in different trail-specific colorways."
+            },
+            "discount": null,
+            "availableSizes": [
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": false }
+            ]
+            },
+            {
+            "name": "Nike Blazer Mid '77 Vintage",
+            "category": "Lifestyle Shoes",
+            "price": 119900,
+            "colors": [
+                {
+                "name": "White/Red",
+                "images": [
+                    placeholderImage
+                ],
+                "sizes": [
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": false },
+                    { "size": getRandomSize(), "availability": true }
+                ],
+                "isDefault": true
+                }
+            ],
+            "description": "A timeless classic with vintage details.",
+            "originCountry": ["China", "Vietnam", "Indonesia", "India"],
+            "productDetails": {
+                "tagline": "A retro look with modern comfort.",
+                "benefits": [
+                "Soft leather upper for a premium feel.",
+                "Rubber outsole for durability and traction."
+                ],
+                "productDetails": ["Weight: 450g", "Stack Height: 30mm"]
+            },
+            "sizeAndFit": {
+                "recommendationText": "Fits true to size for a snug, comfortable fit."
+            },
+            "freeDeliveryAndReturns": {
+                "text": FREE_DELIVERY_AND_RETURNS_TEXT
+            },
+            "moreInfo": {
+                "text": "Retro design available in classic colorways."
+            },
+            "discount": null,
+            "availableSizes": [
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": false },
+                { "size": getRandomSize(), "availability": true }
+            ]
+            },
+            {
+            "name": "Nike Free RN 5.0",
+            "category": "Running Shoes",
+            "price": 129900,
+            "colors": [
+                {
+                "name": "Black/White",
+                "images": [
+                    placeholderImage
+                ],
+                "sizes": [
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": false }
+                ],
+                "isDefault": true
+                }
+            ],
+            "description": "Ultra-flexible for natural movement during runs.",
+            "originCountry": ["China", "Vietnam", "USA", "Indonesia"],
+            "productDetails": {
+                "tagline": "Flexibility for your fastest run.",
+                "benefits": [
+                "Free flex sole for a natural feel.",
+                "Lightweight upper for breathability."
+                ],
+                "productDetails": ["Weight: 220g", "Stack Height: 25mm"]
+            },
+            "sizeAndFit": {
+                "recommendationText": "Fits true to size for a flexible, natural fit."
+            },
+            "freeDeliveryAndReturns": {
+                "text": FREE_DELIVERY_AND_RETURNS_TEXT
+            },
+            "moreInfo": {
+                "text": "Available in multiple sleek color options."
+            },
+            "discount": null,
+            "availableSizes": [
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": false }
+            ]
+            },
+            {
+            "name": "Nike Air Max 720",
+            "category": "Lifestyle Shoes",
+            "price": 150000,
+            "colors": [
+                {
+                "name": "Midnight Navy/White",
+                "images": [
+                    placeholderImage
+                ],
+                "sizes": [
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": true },
+                    { "size": getRandomSize(), "availability": false },
+                    { "size": getRandomSize(), "availability": true }
+                ],
+                "isDefault": true
+                }
+            ],
+            "description": "Bold design with maximum cushioning.",
+            "originCountry": ["USA", "Vietnam", "China", "Indonesia", "India"],
+            "productDetails": {
+                "tagline": "Style and comfort in every step.",
+                "benefits": [
+                "Max Air cushioning for all-day comfort.",
+                "Breathable upper for a lightweight feel."
+                ],
+                "productDetails": ["Weight: 380g", "Stack Height: 38mm"]
+            },
+            "sizeAndFit": {
+                "recommendationText": "Fits true to size for all-day comfort."
+            },
+            "freeDeliveryAndReturns": {
+                "text": FREE_DELIVERY_AND_RETURNS_TEXT
+            },
+            "moreInfo": {
+                "text": "Available in multiple colors and editions."
+            },
+            "discount": null,
+            "availableSizes": [
+                { "size": getRandomSize(), "availability": true },
+                { "size": getRandomSize(), "availability": false },
+                { "size": getRandomSize(), "availability": true }
+            ]
+            },
           ];
 
         // Save shoe to MongoDB

@@ -15,7 +15,7 @@ export const getPaginatedShoes = async (req, res) => {
   
       // Fetch shoes with pagination
       const shoes = await Shoe.find()
-        .sort({ views: -1 }) // Sort by 'views' in descending order
+        .sort({ createdAt: 1 }) // show the latest/newest shoes
         .skip(skip) // Skip the number of shoes based on page and limit
         .limit(limit); // Limit the results to the specified number of shoes per page
       
