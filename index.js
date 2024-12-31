@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import userRouter from './src/Routes/UserRoutes.js';
 import productRouter from './src/Routes/ProductRoutes.js';
+import shoeRouter from './src/Routes/ShoeRoutes.js.js';
 import cookieParser from "cookie-parser";
 
 dotenv.config()
@@ -19,6 +20,7 @@ app.use(cors());
 app.use(express.json());
 app.use(userRouter);
 app.use(productRouter);
+app.use(shoeRouter);
 app.use(cookieParser());
 
 // Define the paths to your SSL certificate and key
