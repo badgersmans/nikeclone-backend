@@ -3,22 +3,22 @@ import mongoose from 'mongoose';
 
 // Create the review schema
 const reviewSchema = new mongoose.Schema({
-    user: { 
+    user: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'User', 
         required: true
     },
-    product: { 
+    shoe: {
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Product', 
+        ref: 'Shoe', 
         required: true
     },
-    name: {
+    title: {
         type: String,
-        required: [true, 'Name is required'],
+        required: [true, 'Title is required'],
         trim: true,
-        minlength: [2, 'Name must be at least 2 characters'],
-        maxlength: [100, 'Name cannot exceed 100 characters'],
+        minlength: [2, 'Title must be at least 2 characters'],
+        maxlength: [50, 'Title cannot exceed 50 characters'],
     },
     comment: {
         type: String,

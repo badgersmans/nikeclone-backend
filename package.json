@@ -8,6 +8,7 @@
     "test": "",
     "start": "nodemon index.js",
     "seedproducts": "node src/Utils/productSeeder",
+    "seedshoe": "node src/Utils/shoeSeeder",
     "seedusers": "node src/Utils/userSeeder",
     "build": "..."
   },
